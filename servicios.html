@@ -172,7 +172,7 @@
                 <button class="btn btn-primary" id="Calcular" onclick="CalcularCosto()"><b>Calcular</b></button>
                 <!-- Resultado -->
                 <h2>Resultado</h2>
-                <p id="result">El costo total es: $<span id="totalCost">0.00</span></p>
+                <p id="result">El costo total es: <span id="totalCost">$0.00</span></p>
             </div>
         </div>
 
@@ -183,26 +183,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script>
         function CalcularCosto() {
-            // Obtener el valor de metros
-            var metros = document.getElementById('metros').value;
+    // Obtener el valor de metros
+    var metros = document.getElementById('metros').value;
 
-            // Obtener los elementos checkbox
-            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            
-            // Inicializar el costo total
-            var totalCost = 0;
+    // Obtener los elementos checkbox
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    // Inicializar el costo total
+    var totalCost = 0;
 
-            // Calcular el costo total
-            checkboxes.forEach(function(checkbox) {
-                if (checkbox.checked) {
-                    var precio = parseFloat(checkbox.value);
-                    totalCost += metros * precio;
-                }
-            });
-
-            // Mostrar el resultado
-            document.getElementById('totalCost').textContent = totalCost.toFixed(2);
+    // Calcular el costo total
+    checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+            var precio = parseFloat(checkbox.value);
+            totalCost += metros * precio;
         }
+    });
+
+    // Formatear el resultado como moneda
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2
+    });
+
+    // Mostrar el resultado
+    document.getElementById('totalCost').textContent = formatter.format(totalCost);
+}
+
         function GoIndex() {
             // Redirigir a inicio.html
             window.location.href = 'index.html';
