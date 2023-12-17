@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="icon" href="img/LOGO (1).jpeg" type="jpeg"> <!-- Logo en la pestaña-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/EstiloMenu.css">
+    <link rel="stylesheet" href="css/ImgMenu.css">
+    <style>
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #limg {
+            max-width: 100px;
+            height: auto;
+        }
+
+        #result {
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <ul class="nav nav-tabs mt-4">
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#home" onclick="GoIndex()">Home</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#messages" onclick="GoService()">Servicios</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#about" onclick="GoAbout()">About</button>
+            </li>
+            <li class="nav-item">
+                <button id="face">
+                    <script src="js/Enlaces.js"></script>
+                    <img src="img/facebook.png" alt="" style="width: 30px; height: 30px;">
+                </button>
+                <button id="inst">
+                    <script src="js/Enlaces.js"></script>
+                    <img src="img/instagram.png" alt="" style="width: 30px; height: 30px;">
+                </button>
+                <button onclick="makeCall('+18297746932')">
+                    <script src="js/Enlaces.js"></script>
+                    <img src="img/whatsapp.png" alt="" style="width: 30px; height: 30px;">
+                </button>
+            </li>
+        </ul>
+        <hr>
+
+        <!-- Lista De Servicios -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Lista De Servicios</h2>
+                <div class="row">
+                    <div class="col">
+                        <ul class="list-unstyled">
+                            <!-- Repite este bloque para otros servicios -->
+                            <li><b>Diseño-Arquitectonico</b><br><img id="limg" src="img/Disenos-Arquitectonicos.jpg" alt=""></li>
+                            <li><b>Diseño-Estructural</b><br><img id="limg" src="img/Disenos-Estructurales.png" alt=""></li>
+                            <li><b>Diseño-Eléctrico</b><br><img id="limg" src="img/Disenos-Electrico.png" alt=""></li>
+                            <li><b>Diseño-Sanitario</b><br><img id="limg" src="img/Disenos-Sanitario.jpg" alt=""></li>
+                            <!-- Repite este bloque para otros servicios -->
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul>
+                            <li><b>Presupuesto</b><br><img id="limg" src="img/presupuesto.jpg" alt=""></li>
+                            <li><b>Supervisión de obra</b><br><img id="limg" src="img/supervision.jpg" alt=""></li>
+                            <li><b>Construcciones</b><br><img id="limg" src="img/construccion-casa-fases.webp" alt=""></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Cotizar -->
+            <div class="col-md-6">
+                <h2>Cotizar</h2>
+                <input type="number" name="" id="metros" placeholder="Metros a cotizar" class="form-control">
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th>Servicios</th>
+                            <th>Precios</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="Disenos-Arquitectonicos" value="300" id="DisArq">
+                                    Diseños-Arquitectónicos
+                                </label>
+                            </td>
+                            <td>$300 M2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="Disenos-Estructurales" value="80" id="DisEst">
+                                    Diseños-Estructurales
+                                </label>
+                            </td>
+                            <td>80$ M2</td>
+                            <td> </td> 
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="Disenos-Electrico" value="45" id="DisEle">
+                                    Diseños-Eléctricos
+                                </label>
+                            </td>
+                            <td>45$ M2</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="Disenos-Sanitario" value="45" id="DisSan">
+                                    Diseños-Sanitarios
+                                </label>
+                            </td>
+                            <td>45$ M2</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="presupuesto" value="45" id="Pre">
+                                    Presupuesto
+                                </label>
+                            </td>
+                            <td>45$ M2</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="supervision" value="150" id="Sup">
+                                    Supervisión-Obras
+                                </label>
+                            </td>
+                            <td>150$ M2</td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label>
+                                    <input type="checkbox" name="Construcciones" value="150" id="Con">
+                                    Construcciones
+                                </label>
+                            </td>
+                            <td>150$ M2</td>
+                            <td> </td>
+                        </tr>
+                        <!-- Repite este bloque para otros servicios -->
+                    </tbody>
+                </table>
+                <button class="btn btn-primary" id="Calcular" onclick="CalcularCosto()"><b>Calcular</b></button>
+                <!-- Resultado -->
+                <h2>Resultado</h2>
+                <p id="result">El costo total es: $<span id="totalCost">0.00</span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/Cotizacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script>
+        function CalcularCosto() {
+            // Obtener el valor de metros
+            var metros = document.getElementById('metros').value;
+
+            // Obtener los elementos checkbox
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            
+            // Inicializar el costo total
+            var totalCost = 0;
+
+            // Calcular el costo total
+            checkboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    var precio = parseFloat(checkbox.value);
+                    totalCost += metros * precio;
+                }
+            });
+
+            // Mostrar el resultado
+            document.getElementById('totalCost').textContent = totalCost.toFixed(2);
+        }
+        function GoIndex() {
+            // Redirigir a inicio.html
+            window.location.href = 'index.html';
+        }
+        function GoDiseno() {
+            // Redirigir a inicio.html
+            window.location.href = 'Diseño.html';
+        }
+        function GoService() {
+            // Redirigir a inicio.html
+            window.location.href = 'servicios.html';
+        }
+        function GoAbout() {
+            // Redirigir a inicio.html
+            window.location.href = 'AcercaDe.html';
+        }
+    </script>
+</body>
+</html>

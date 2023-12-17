@@ -1,0 +1,50 @@
+
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#limg{
+    height: 100px;
+    width: 150px;
+    border: 3px solid black;
+}
+
+.logo{
+    width: 150px;
+    height: 100px;
+}
+
+video{
+    margin: auto;   
+}
+
+/* Diseño de la tabla*/
+table {
+    max-width: 100%;
+    border: 1px solid black;
+  border-collapse: collapse;
+}
+th{
+    border: 1px solid black;
+  padding: 10px;
+  background-color: darkgreen;
+  font-size: 20px;
+}
+td {
+border: 1px solid black;
+padding: 5px;
+}
+tr {
+background-color: #f2f2f2;
+}
+button{
+    font-size: 20px;
+}
+button:hover{
+    font-size: 22px;
+    background-color: wheat;
+    border-radius: 4px;
+    cursor: pointer;
+}
