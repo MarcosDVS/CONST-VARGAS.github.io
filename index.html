@@ -18,93 +18,53 @@
 />
 </head>
 <!-- style="background-image: url(img/POST\ \(2\).jpg); background-size: cover;" -->
-<body>
+<body style="background-image: url(img/POST\ \(2\).jpg); background-size: cover;">
     
     <div class="container">
             <div class="row">
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button
-                            class="nav-link active"
-                            id="home-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#home"
-                            type="button"
-                            role="tab"
-                            aria-controls="home"
-                            aria-selected="true"
-                            onclick="GoIndex()"
-                        >
-                            Home
+                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                    <div class="container">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/LOGO (1).jpeg" alt="Logo" height="40">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button
-                            class="nav-link"
-                            id="messages-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#messages"
-                            type="button"
-                            role="tab"
-                            aria-controls="messages"
-                            aria-selected="false"
-                            onclick="GoService()"
-                        >
-                            Servicios
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button
-                            class="nav-link"
-                            id="messages-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#messages"
-                            type="button"
-                            role="tab"
-                            aria-controls="messages"
-                            aria-selected="false"
-                            onclick="GoAbout()"
-                        >
-                            About
-                        </button>
-                    </li>
-                    <li>
-                        <button id="face">
-                            <script src="js/Enlaces.js"></script>
-                            <img src="img/facebook.png" alt="" style="width: 30px; height: 30px;">
-                        </button>
-                        <button id="inst">
-                            <script src="js/Enlaces.js"></script>
-                            <img src="img/instagram.png" alt="" style="width: 30px; height: 30px;">
-                        </button>
-                        <button onclick="makeCall('+18297746932')">
-                            <script src="js/Enlaces.js"></script>
-                            <img src="img/whatsapp.png" alt="" style="width: 30px; height: 30px;">
-                        </button>
-                    </li>
-                </ul>    
-        
-                <script>
-                    function GoIndex() {
-                    // Redirigir a inicio.html
-                    window.location.href = 'index.html';
-                }
-                function GoDiseno() {
-                    // Redirigir a inicio.html
-                    window.location.href = 'Diseño.html';
-                }
-                function GoService() {
-                    // Redirigir a inicio.html
-                    window.location.href = 'servicios.html';
-                }
-                function GoAbout() {
-                    // Redirigir a inicio.html
-                    window.location.href = 'AcercaDe.html';
-                }
-                </script>
+                        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Desing.html">Proyectos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="servicios.html">Servicios</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="AcercaDe.html">About</a>
+                                </li>
+                            </ul>
+                            
+                            <div class="d-flex social-icons">
+                                <a href="#" class="me-3" id="face">
+                                    <img src="img/facebook.png" alt="Facebook" width="30" height="30">
+                                </a>
+                                <a href="#" class="me-3" id="inst">
+                                    <img src="img/instagram.png" alt="Instagram" width="30" height="30">
+                                </a>
+                                <a href="#" onclick="makeCall('+18297746932')" class="me-3">
+                                    <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
             <hr>
+            <br>
             <img class="logo" src="img/LOGO (1).jpeg" alt="">
             
 
@@ -120,7 +80,7 @@
         </div>
 
 
-    
+    <script src="js/Enlaces.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

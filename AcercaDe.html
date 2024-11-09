@@ -16,7 +16,7 @@
     crossorigin="anonymous"
 />
 </head>
-<body>
+<body style="background-image: url(img/POST\ \(2\).jpg); background-size: cover;">
     <style>
         h1 {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,180 +32,201 @@
     <div class="container">
         <div class="row">
             <!-- Nav tabs -->
-            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button
-                        class="nav-link"
-                        id="home-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#home"
-                        type="button"
-                        role="tab"
-                        aria-controls="home"
-                        aria-selected="false"
-                        onclick="GoIndex()"
-                    >
-                        Home
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/LOGO (1).jpeg" alt="Logo" height="40">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button
-                        class="nav-link"
-                        id="messages-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#messages"
-                        type="button"
-                        role="tab"
-                        aria-controls="messages"
-                        aria-selected="false"
-                        onclick="GoService()"
-                    >
-                        Servicios
-                    </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button
-                        class="nav-link active"
-                        id="messages-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#messages"
-                        type="button"
-                        role="tab"
-                        aria-controls="messages"
-                        aria-selected="true"
-                        onclick="GoAbout()"
-                    >
-                        About
-                    </button>
-                </li>
-                <li>
-                    <button id="face">
-                        <script src="js/Enlaces.js"></script>
-                        <img src="img/facebook.png" alt="" style="width: 30px; height: 30px;">
-                    </button>
-                    <button id="inst">
-                        <script src="js/Enlaces.js"></script>
-                        <img src="img/instagram.png" alt="" style="width: 30px; height: 30px;">
-                    </button>
-                    <button onclick="makeCall('+18297746932')">
-                        <script src="js/Enlaces.js"></script>
-                        <img src="img/whatsapp.png" alt="" style="width: 30px; height: 30px;">
-                    </button>
-                </li>
-            </ul>    
-    
-            <script>
-                function GoIndex() {
-                // Redirigir a inicio.html
-                window.location.href = 'index.html';
-            }
-            function GoDiseno() {
-                // Redirigir a inicio.html
-                window.location.href = 'Diseño.html';
-            }
-            function GoService() {
-                // Redirigir a inicio.html
-                window.location.href = 'servicios.html';
-            }
-            function GoAbout() {
-                // Redirigir a inicio.html
-                window.location.href = 'AcercaDe.html';
-            }
-            </script>
+                    
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Desing.html">Proyectos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="AcercaDe.html">About</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="d-flex social-icons">
+                            <a href="#" class="me-3" id="face">
+                                <img src="img/facebook.png" alt="Facebook" width="30" height="30">
+                            </a>
+                            <a href="#" class="me-3" id="inst">
+                                <img src="img/instagram.png" alt="Instagram" width="30" height="30">
+                            </a>
+                            <a href="tel:+18297746932" class="me-3">
+                                <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </div>
         <hr>
+        <br>
+        <div class="container py-5 mt-5">
+            <div class="row mb-4">
+                <h1 class="lead text-white bg-dark bg-opacity-75 
+                p-3 rounded text-center text-uppercase fw-bold display-5">
+                    Objetivos de la Constructora Vargas
+                </h1>
+                        
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Excelencia en Diseño Arquitectónico</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item" style="background-color: transparent;">Desarrollar diseños arquitectónicos innovadores y estéticos que cumplan con los requisitos y expectativas de los clientes.</li>
+                                <li class="list-group-item" style="background-color: transparent;">Mantenerse actualizado en las últimas tendencias y tecnologías en diseño arquitectónico para ofrecer soluciones vanguardistas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Optimizar en Diseños Estructurales</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Proporcionar diseños estructurales seguros, eficientes y sostenibles que cumplan con los estándares y regulaciones locales.</li>
+                                <li class="list-group-item">Colaborar con ingenieros estructurales para garantizar la integridad y resistencia de las estructuras.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="row">
-            <div class="col"><h1 >Objetivos de la Constructora Vargas</h1></div>  
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Innovar Diseños Eléctricos y Sanitarios</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Desarrollar diseños eléctricos eficientes y sostenibles, incorporando tecnologías de energía renovable cuando sea posible.</li>
+                                <li class="list-group-item">Diseñar sistemas sanitarios eficaces que cumplan con las normativas y promuevan la eficiencia del consumo de agua.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Precisión en Presupuestos</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Proporcionar presupuestos detallados y precisos para cada proyecto, considerando materiales, mano de obra y otros costos asociados.</li>
+                                <li class="list-group-item">Optimizar la gestión de costos para maximizar la rentabilidad y la satisfacción del cliente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Supervisión de Obra</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Implementar un proceso efectivo de supervisión de obra para garantizar la calidad y el cumplimiento de los plazos.</li>
+                                <li class="list-group-item">Mantener una comunicación fluida entre el equipo de supervisión y los clientes para abordar cualquier problema de manera oportuna.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Calidad en Construcciones</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Construir estructuras duraderas y de alta calidad que cumplan con los estándares de seguridad y las expectativas del cliente.</li>
+                                <li class="list-group-item">Colaborar con contratistas y proveedores de confianza para garantizar la excelencia en la ejecución de la construcción.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Satisfacción del Cliente</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Priorizar la satisfacción del cliente en cada etapa del proyecto, desde la consulta inicial hasta la entrega final.</li>
+                                <li class="list-group-item">Obtener comentarios continuos de los clientes y utilizarlos para mejorar constantemente los servicios ofrecidos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Desarrollo Sostenible</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Integrar prácticas de construcción sostenible en todos los proyectos para minimizar el impacto ambiental.</li>
+                                <li class="list-group-item">Promover el uso de materiales sostenibles y tecnologías ecológicas en los diseños y construcciones.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Crecimiento Empresarial</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Expandir la cartera de servicios para satisfacer las cambiantes necesidades del mercado.</li>
+                                <li class="list-group-item">Buscar oportunidades de crecimiento en nuevos mercados geográficos o sectores de la industria de la construcción.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm" style="background-color: #f8f9fa;">
+                        <div class="card-body">
+                            <h2 class="card-title mb-3" style="color: #1a3d7c;">Cultura de Seguridad</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Mantener un entorno de trabajo seguro para todos los empleados y subcontratistas.</li>
+                                <li class="list-group-item">Implementar y actualizar regularmente protocolos de seguridad para prevenir accidentes y lesiones laborales.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h1 class="text-primary mb-4">Contacto</h1>
+                            <img class="img-fluid rounded" style="max-width: 550px; margin: auto;" src="img/card (2).jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Excelencia en Diseño Arquitectónico</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Desarrollar diseños arquitectónicos innovadores y estéticos que cumplan con los requisitos y expectativas de los clientes.</li>
-                    <li class="list-group-item">Mantenerse actualizado en las últimas tendencias y tecnologías en diseño arquitectónico para ofrecer soluciones vanguardistas.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Optimizar en Diseños Estructurales</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Proporcionar diseños estructurales seguros, eficientes y sostenibles que cumplan con los estándares y regulaciones locales.</li>
-                    <li class="list-group-item">Colaborar con ingenieros estructurales para garantizar la integridad y resistencia de las estructuras.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Innovar Diseños Eléctricos y Sanitarios</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Desarrollar diseños eléctricos eficientes y sostenibles, incorporando tecnologías de energía renovable cuando sea posible.</li>
-                    <li class="list-group-item">Diseñar sistemas sanitarios eficaces que cumplan con las normativas y promuevan la eficiencia del consumo de agua.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Precisión en Presupuestos</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Proporcionar presupuestos detallados y precisos para cada proyecto, considerando materiales, mano de obra y otros costos asociados.</li>
-                    <li class="list-group-item">Optimizar la gestión de costos para maximizar la rentabilidad y la satisfacción del cliente.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Supervisión de Obra</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Implementar un proceso efectivo de supervisión de obra para garantizar la calidad y el cumplimiento de los plazos.</li>
-                    <li class="list-group-item">Mantener una comunicación fluida entre el equipo de supervisión y los clientes para abordar cualquier problema de manera oportuna.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Calidad en Construcciones</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Construir estructuras duraderas y de alta calidad que cumplan con los estándares de seguridad y las expectativas del cliente.</li>
-                    <li class="list-group-item">Colaborar con contratistas y proveedores de confianza para garantizar la excelencia en la ejecución de la construcción.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Satisfacción del Cliente</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Priorizar la satisfacción del cliente en cada etapa del proyecto, desde la consulta inicial hasta la entrega final.</li>
-                    <li class="list-group-item">Obtener comentarios continuos de los clientes y utilizarlos para mejorar constantemente los servicios ofrecidos.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Desarrollo Sostenible</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Integrar prácticas de construcción sostenible en todos los proyectos para minimizar el impacto ambiental.</li>
-                    <li class="list-group-item">Promover el uso de materiales sostenibles y tecnologías ecológicas en los diseños y construcciones.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Crecimiento Empresarial</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Expandir la cartera de servicios para satisfacer las cambiantes necesidades del mercado.</li>
-                    <li class="list-group-item">Buscar oportunidades de crecimiento en nuevos mercados geográficos o sectores de la industria de la construcción.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h2>Cultura de Seguridad</h2>
-                <ul class="list-group">
-                    <li class="list-group-item">Mantener un entorno de trabajo seguro para todos los empleados y subcontratistas.</li>
-                    <li class="list-group-item">Implementar y actualizar regularmente protocolos de seguridad para prevenir accidentes y lesiones laborales.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col"><h1>Contacto</h1></div>
-        </div>
-        <div class="col"><img style="width: 550px; margin: auto;" src="img/card (2).jpg" alt=""></div>
     </div>
 
-
+    <script src="js/Enlaces.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
