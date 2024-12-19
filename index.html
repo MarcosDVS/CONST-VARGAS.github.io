@@ -1,95 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constructora Vargas</title>
-    <link rel="icon" href="img/LOGO (1).jpeg" type="jpeg"> <!-- Logo en la pestaña-->
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/EstiloMenu.css">
-    <link rel="stylesheet" href="css/ImgMenu.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- Bootstrap CSS v5.2.1 -->
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"
-/>
+    crossorigin="anonymous"/>
 </head>
-<!-- style="background-image: url(img/POST\ \(2\).jpg); background-size: cover;" -->
-<body style="background-image: url(img/POST\ \(2\).jpg); background-size: cover;">
-    
-    <div class="container">
-            <div class="row">
-                <!-- Nav tabs -->
-                <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="img/LOGO (1).jpeg" alt="Logo" height="40">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="Desing.html">Proyectos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="servicios.html">Servicios</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="AcercaDe.html">About</a>
-                                </li>
-                            </ul>
-                            
-                            <div class="d-flex social-icons">
-                                <a href="#" class="me-3" id="face">
-                                    <img src="img/facebook.png" alt="Facebook" width="30" height="30">
-                                </a>
-                                <a href="#" class="me-3" id="inst">
-                                    <img src="img/instagram.png" alt="Instagram" width="30" height="30">
-                                </a>
-                                <a href="#" onclick="makeCall('+18297746932')" class="me-3">
-                                    <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/LOGO (1).jpeg" alt="Logo Constructora Vargas">
             </div>
-            <hr>
-            <br>
-            <img class="logo" src="img/LOGO (1).jpeg" alt="">
-            
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#cotizar">Cotización</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <div class="row">
-                <section>
-                    <img src="img/Apartamento (1).jpeg" alt="">
-                    <img src="img/Apartamento (2).jpeg" alt="">
-                    <img src="img/interior (1).jpeg" alt="">
-                    <img src="img/interior (2).jpeg" alt="">
-                    <img src="img/interior (3).jpeg" alt="">
-                </section>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Construimos tus sueños con calidad y excelencia</h1>
+            <p>Desde diseños arquitectónicos innovadores hasta construcciones duraderas y sostenibles.</p>
+            <a href="#cotizar" class="cta-button">Solicita tu Cotización</a>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos una amplia gama de servicios para llevar tus proyectos al siguiente nivel.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Diseños Arquitectónicos</h3>
+                    <p>Costo: $300/M²</p>
+                    <p>Diseños innovadores y personalizados que cumplen con tus expectativas.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Diseños Estructurales</h3>
+                    <p>Costo: $80/M²</p>
+                    <p>Estructuras seguras y eficientes que garantizan la estabilidad de tus proyectos.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Diseños Eléctricos</h3>
+                    <p>Costo: $45/M²</p>
+                    <p>Sistemas eléctricos eficientes, incorporando tecnologías sostenibles.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Diseños Sanitarios</h3>
+                    <p>Costo: $45/M²</p>
+                    <p>Sistemas sanitarios eficaces y sostenibles, cumpliendo con las normativas.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Presupuestos</h3>
+                    <p>Costo: $45/M²</p>
+                    <p>Proveemos presupuestos detallados y precisos para cada etapa del proyecto.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Supervisión de Obras</h3>
+                    <p>Costo: $150/M²</p>
+                    <p>Aseguramos la calidad y el cumplimiento de plazos en cada proyecto.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Construcciones</h3>
+                    <p>Costo: $150/M²</p>
+                    <p>Construcciones duraderas y de alta calidad adaptadas a tus necesidades.</p>
+                </div>
             </div>
         </div>
+    </section>
+    
+
+    <!-- Cotización Section -->
+    <section id="cotizar" class="cotizacion-section">
+        <div class="container">
+            <h2>Cotiza tu Proyecto</h2>
+            <p class="disclaimer">
+                El valor de cotización mostrado será un aproximado. Si desea conocer el valor exacto, por favor contáctenos directamente.
+            </p>
+            <form id="cotizar-form">
+                <label for="metros">Metros a cotizar:</label>
+                <input type="number" id="metros" name="metros" placeholder="Ingrese los metros cuadrados" required>
+                
+                <button type="submit" class="cta-button">Calcular Costo</button>
+            </form>
+            <div id="resultado-cotizacion">
+                <p>El costo total es: <span id="total-costo">$0.00</span></p>
+            </div>
+        </div>
+    </section>
 
 
-    <script src="js/Enlaces.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"
-    ></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"
-    ></script>
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="about-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Sobre Constructora Vargas</h2>
+            <p class="lead mb-5">
+                En <strong>CONSTRUCTORA VARGAS</strong>, ofrecemos una amplia gama de servicios de construcción, garantizando calidad, innovación y satisfacción del cliente. Nos enfocamos en cumplir con los más altos estándares de seguridad, sostenibilidad y diseño.
+            </p>
+            <div class="row g-4">
+                <!-- Tarjeta de Contacto -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card shadow">
+                        <img src="img/card (2).jpg" class="card-img-top" alt="Tarjeta de Contacto">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuestra Tarjeta de Contacto</h5>
+                            <p class="card-text">Encuentra todos nuestros detalles de contacto aquí.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicios -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card shadow">
+                        <img src="img/SERVICIOS.jpeg" class="card-img-top" alt="Tarjeta de Servicios">
+                        <div class="card-body">
+                            <h5 class="card-title">Servicios que Ofrecemos</h5>
+                            <p class="card-text">Descubre nuestra lista completa de servicios y tarifas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna consulta o deseas más información? ¡Estamos aquí para ayudarte!</p>
+            <div class="contact-info">
+                <ul class="social-links">
+                    <li>
+                        <a href="https://instagram.com/vargasconstructora839?igshid=YmMyMTA2M2Y=" target="_blank">
+                            <img src="img/instagram.png" alt="Instagram">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100089422300267&mibextid=ZbWKwL" target="_blank">
+                            <img src="img/facebook.png" alt="Facebook">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/18297746932" target="_blank">
+                            <img src="img/whatsapp.png" alt="WhatsApp">
+                            WhatsApp: 829-774-6932
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Constructora Vargas. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
