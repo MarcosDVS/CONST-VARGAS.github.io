@@ -15,29 +15,33 @@ header {
     color: #fff;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav .logo img {
+header .logo img {
     height: 40px;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-}
-
-header nav ul li {
+/* Personalización de los enlaces del menú */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    text-decoration: none;
     margin: 0 15px;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+/* Estilo del menú en el móvil */
+.navbar-toggler {
+    border-color: #fff; /* Cambio del borde del botón en el móvil */
 }
+
+/* Cuando el menú esté desplegado en móviles */
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+    .nav-item {
+        margin: 10px 0;
+    }
+}
+
 
 .hero {
     background: url('../img/POST\ \(2\).jpg') no-repeat center center/cover;
