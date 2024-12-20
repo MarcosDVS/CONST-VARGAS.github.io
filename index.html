@@ -1,77 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotizador Automático</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: url('https://via.placeholder.com/1920x1080/00008b/ffffff') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-        }
-        .cotizador-container {
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        .service-item {
-            margin-bottom: 15px;
-        }
-    </style>
+    <title>Constructora Vargas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"/>
 </head>
 <body>
-    <div class="container py-5">
-        <div class="cotizador-container">
-            <h1 class="text-center mb-4">Cotizador Automático</h1>
-            <form id="cotizador-form">
-                <div class="mb-3">
-                    <label for="metros" class="form-label">Cantidad de Metros Cuadrados</label>
-                    <input type="number" id="metros" class="form-control" placeholder="Ingrese la cantidad de m²" required>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #333;">
+            <div class="container">
+                <div class="logo">
+                    <img src="img/LOGO (1).jpeg" alt="Logo Constructora Vargas" height="40">
                 </div>
-
-                <div class="mb-4">
-                    <h5>Seleccione los servicios:</h5>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="diseno-arquitectonico" data-precio="300">
-                        <label class="form-check-label" for="diseno-arquitectonico">Diseños Arquitectónicos ($300/M²)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="diseno-estructural" data-precio="80">
-                        <label class="form-check-label" for="diseno-estructural">Diseños Estructurales ($80/M²)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="diseno-electrico" data-precio="45">
-                        <label class="form-check-label" for="diseno-electrico">Diseños Eléctricos ($45/M²)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="diseno-sanitario" data-precio="45">
-                        <label class="form-check-label" for="diseno-sanitario">Diseños Sanitarios ($45/M²)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="presupuesto" data-precio="45">
-                        <label class="form-check-label" for="presupuesto">Presupuestos ($45/M²)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="construccion" data-precio="150">
-                        <label class="form-check-label" for="construccion">Construcciones ($150/M²)</label>
-                    </div>
+                <!-- Botón de menú para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cotizar">Cotización</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+        </nav>
+    </header>
+    
 
-                <button type="button" class="btn btn-primary w-100" onclick="calcularCosto()">Calcular Costo</button>
-                <button type="button" class="btn btn-secondary w-100 mt-2" onclick="generarDocumento()">Generar Documento</button>
-            </form>
-
-            <div id="resultado" class="mt-4"></div>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Construimos tus sueños con calidad y excelencia</h1>
+            <p>Desde diseños arquitectónicos innovadores hasta construcciones duraderas y sostenibles.</p>
+            <a href="#cotizar" class="cta-button">Solicita tu Cotización</a>
         </div>
-    </div>
+    </section>
 
-    <script>
-        
-    </script>
+    <!-- Servicios Section -->
+    <section id="servicios" class="services-section">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos una amplia gama de servicios para llevar tus proyectos al siguiente nivel.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Diseños Arquitectónicos</h3>
+                    <p>Costo: $300/M²</p>
+                    <p>Diseños innovadores y personalizados que cumplen con tus expectativas.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Diseños Estructurales</h3>
+                    <p>Costo: $80/M²</p>
+                    <p>Estructuras seguras y eficientes que garantizan la estabilidad de tus proyectos.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Diseños Eléctricos</h3>
+                    <p>Costo: $45/M²</p>
+                    <p>Sistemas eléctricos eficientes, incorporando tecnologías sostenibles.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Diseños Sanitarios</h3>
+                    <p>Costo: $45/M²</p>
+                    <p>Sistemas sanitarios eficaces y sostenibles, cumpliendo con las normativas.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Presupuestos</h3>
+                    <p>Costo: $45/M²</p>
+                    <p>Proveemos presupuestos detallados y precisos para cada etapa del proyecto.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Supervisión de Obras</h3>
+                    <p>Costo: $150/M²</p>
+                    <p>Aseguramos la calidad y el cumplimiento de plazos en cada proyecto.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Construcciones</h3>
+                    <p>Costo: $150/M²</p>
+                    <p>Construcciones duraderas y de alta calidad adaptadas a tus necesidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Cotización Section -->
+    <section id="cotizar" class="cotizacion-section">
+        <div class="container">
+            <h2>Cotiza tu Proyecto</h2>
+            <p class="disclaimer">
+                El valor de cotización mostrado será un aproximado. Si desea conocer el valor exacto, por favor contáctenos directamente.
+            </p>
+            <div class="disclaimer">
+                <form id="cotizador-form" class="p-4 border rounded shadow-sm">
+                    <div class="mb-3">
+                        <label for="metros" class="form-label fw-semibold">Cantidad de Metros Cuadrados</label>
+                        <input type="number" id="metros" class="form-control" placeholder="Ingrese la cantidad de m²" required>
+                    </div>
+                
+                    <div class="mb-4">
+                        <h5 class="fw-semibold mb-3">Seleccione los servicios:</h5>
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="diseno-arquitectonico" data-precio="300">
+                                    <label class="form-check-label" for="diseno-arquitectonico">Diseños Arquitectónicos ($300/M²)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="diseno-estructural" data-precio="80">
+                                    <label class="form-check-label" for="diseno-estructural">Diseños Estructurales ($80/M²)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="diseno-electrico" data-precio="45">
+                                    <label class="form-check-label" for="diseno-electrico">Diseños Eléctricos ($45/M²)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="diseno-sanitario" data-precio="45">
+                                    <label class="form-check-label" for="diseno-sanitario">Diseños Sanitarios ($45/M²)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="presupuesto" data-precio="45">
+                                    <label class="form-check-label" for="presupuesto">Presupuestos ($45/M²)</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="construccion" data-precio="150">
+                                    <label class="form-check-label" for="construccion">Construcciones ($150/M²)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <button type="button" class="btn btn-primary w-100 fw-bold" onclick="calcularCosto()">Calcular Costo</button>
+                </form>
+                
+                <div id="resultado" class="mt-4 p-3 border rounded shadow-sm"></div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nosotros Section -->
+    <section id="nosotros" class="about-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Sobre Constructora Vargas</h2>
+            <p class="lead mb-5">
+                En <strong>CONSTRUCTORA VARGAS</strong>, ofrecemos una amplia gama de servicios de construcción, garantizando calidad, innovación y satisfacción del cliente. Nos enfocamos en cumplir con los más altos estándares de seguridad, sostenibilidad y diseño.
+            </p>
+            <div class="row g-4">
+                <!-- Tarjeta de Contacto -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card shadow">
+                        <img src="img/card (2).jpg" class="card-img-top" alt="Tarjeta de Contacto">
+                        <div class="card-body">
+                            <h5 class="card-title">Nuestra Tarjeta de Contacto</h5>
+                            <p class="card-text">Encuentra todos nuestros detalles de contacto aquí.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de Servicios -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card shadow">
+                        <img src="img/SERVICIOS.jpeg" class="card-img-top" alt="Tarjeta de Servicios">
+                        <div class="card-body">
+                            <h5 class="card-title">Servicios que Ofrecemos</h5>
+                            <p class="card-text">Descubre nuestra lista completa de servicios y tarifas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna consulta o deseas más información? ¡Estamos aquí para ayudarte!</p>
+            <div class="contact-info">
+                <ul class="social-links">
+                    <li>
+                        <a href="https://instagram.com/vargasconstructora839?igshid=YmMyMTA2M2Y=" target="_blank">
+                            <img src="img/instagram.png" alt="Instagram">
+                            Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100089422300267&mibextid=ZbWKwL" target="_blank">
+                            <img src="img/facebook.png" alt="Facebook">
+                            Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/18297746932" target="_blank">
+                            <img src="img/whatsapp.png" alt="WhatsApp">
+                            WhatsApp: 829-774-6932
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Constructora Vargas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/Cotizacion.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"
+    ></script>
 </body>
 </html>
